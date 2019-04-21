@@ -1,0 +1,56 @@
+<section class="wrapper">
+  <div class="toolbar">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <span class="nav-brand">i-Banking</span>
+        <span class="example-spacer"></span>
+        <button class="center" mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon class="example-icon" aria-hidden="false" aria-label="Settings">settings</mat-icon>
+        </button>
+        <button class="center" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon class="example-icon" aria-hidden="false" aria-label="Menu">menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Settings</button>
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+   
+  <!-- <section class="drawer__wrapper">
+    <mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+      <mat-drawer-content>
+        Main content
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </section> -->
+  
+  <section class="drawer__wrapper">
+    <mat-drawer-container class="sidenav-container">
+
+      <mat-drawer #drawer class="sidenav-content" mode="side">
+        <a title="Menu" (click)="toggleSidebarSize()" class="sidebar-link"><span><mat-icon svgIcon="menu"></mat-icon></span><span>Menu</span></a>
+        <a title="Home" class="sidebar-link" routerLink="/app"><span><mat-icon svgIcon="home"></mat-icon></span><span>Home</span></a>
+        <a title="Accounts" class="sidebar-link" routerLink="/app/accounts"><span><mat-icon svgIcon="bank"></mat-icon></span><span>Accounts</span></a>
+        <a title="Transfers" class="sidebar-link" routerLink="/app/transfers"><span><mat-icon svgIcon="cash-multiple"></mat-icon></span><span>Transfers</span></a>
+        <a title="Airtime & Bills" class="sidebar-link" routerLink="/app/airtime-bills"><span><mat-icon svgIcon="file-document-box"></mat-icon></span><span>Airtime & Bills</span></a>
+        <a title="Western Union" class="sidebar-link" routerLink="/app/western-union"><span><mat-icon svgIcon="cash"></mat-icon></span><span>Western Union</span></a>
+        <a title="Goals" class="sidebar-link" routerLink="/app/goals"><span><mat-icon svgIcon="cash-multiple"></mat-icon></span><span>Goals</span></a>
+        <a title="Loans" class="sidebar-link" routerLink="/app/loans"><span><mat-icon svgIcon="ferry"></mat-icon></span><span>Loans</span></a>
+        <a title="Profile" class="sidebar-link" routerLink="/app/profile"><span><mat-icon svgIcon="account-circle"></mat-icon></span><span>Profile</span></a>
+        <a title="Lifestyle" class="sidebar-link" routerLink="/app/lifestyle"><span><mat-icon svgIcon="file-document-box"></mat-icon></span><span>Lifestyle</span></a>
+        <a title="Cards" class="sidebar-link" routerLink="/app/cards"><span><mat-icon svgIcon="credit-card"></mat-icon></span><span>Cards</span></a>
+        <a title="Settings" class="sidebar-link" routerLink="/app/settings"><span><mat-icon svgIcon="settings"></mat-icon></span><span>Settings</span></a>
+        <a title="Contact" class="sidebar-link" routerLink="/app/support"><span><mat-icon svgIcon="phone-in-talk"></mat-icon></span><span>Contact</span></a>
+      </mat-drawer>
+
+    
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+      
+    </mat-drawer-container>
+  </section>
+</section>

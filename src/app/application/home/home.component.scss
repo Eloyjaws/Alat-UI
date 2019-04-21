@@ -1,0 +1,121 @@
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card {
+    width: 400px;
+    height: 280px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+    margin-right: 32px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15), 
+            0 10px 10px rgba(0,0,0,0.12);
+    a {
+        text-decoration: none;
+        color: rgba(108, 68, 255, 0.8);
+        &:hover {
+            color: rgba(108, 68, 255, 1);
+        }
+    }
+    button {
+        border: 1px solid #6C44FF;
+        color: #6c44ff;
+        background: #FFFFFF;
+        padding: 8px 12px;
+        font-weight: 300;
+        font-size: 14px;
+        &:hover {
+            background: #6C44FF;
+            color: #FFFFFF;
+            transition: background-color 0.18s linear;
+        }
+    }
+}
+
+.card p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.card__header {
+    background: #2B4CFF;
+	background: -webkit-linear-gradient(to right, #7751ff, #6c44ff);
+	background: linear-gradient(to right, #7751ff, #6C44FF);
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: 0 0;
+    height: 40px;
+    color: #FFFFFF;
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 24px;
+    font-weight: 300;
+}
+
+.card__body {
+    background: #FFFFFF;
+    padding: 16px 24px;
+}
+
+.card__body--row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.text-blue {
+    color: #6c44ff;
+}
+
+.text-muted {
+    color: #797979;
+}
+
+.text-lg {
+    font-size: 1.4rem !important;
+    font-weight: 500;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.mb-1 {
+    margin-bottom: 8px;
+}
+
+.mb-3 {
+    margin-bottom: 20px;
+}
+
+.round-success {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 3px;
+    background: rgb(10, 200, 10);
+}
+
+
+@media screen and (min-width: 720px) {
+    .card {
+        width: 480vw;
+        height: 320px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .card {
+        width: 400px;
+        height: 280px;
+    }
+}
