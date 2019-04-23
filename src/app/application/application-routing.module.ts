@@ -19,10 +19,10 @@ const routes: Routes = [
     path: '',
     component: ApplicationComponent,
     children: [
-      {path: '', component: HomeComponent},
-      {path: 'accounts', component: AccountsComponent},
-      {path: 'transfers', component: TransfersComponent},
-      {path: 'airtime-bills', component: AirtimeAndBillsComponent},
+      {path: 'home', component: HomeComponent},
+      {path: 'accounts', component: AccountsComponent, loadChildren: './accounts/accounts.module#AccountsModule'},
+      {path: 'transfers', component: TransfersComponent, loadChildren: './transfers/transfers.module#TransfersModule'},
+      {path: 'airtime-bills', component: AirtimeAndBillsComponent, loadChildren: './airtime-and-bills/airtime-and-bills.module#AirtimeAndBillsModule'},
       {path: 'western-union', component: WesternUnionComponent},
       {path: 'goals', component: GoalsComponent},
       {path: 'loans', component: LoansComponent},
@@ -30,7 +30,9 @@ const routes: Routes = [
       {path: 'lifestyle', component: LifestyleComponent},
       {path: 'cards', component: CardsComponent},
       {path: 'settings', component: SettingsComponent},
-      {path: 'support', component: SupportComponent}
+      {path: 'support', component: SupportComponent},
+      {path: '', redirectTo: 'home'},
+
     ]
   }
 ];

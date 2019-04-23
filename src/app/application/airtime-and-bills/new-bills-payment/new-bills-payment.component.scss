@@ -1,0 +1,25 @@
+:host ::ng-deep .mat-icon svg {
+    width: 24px;
+    height: 24px;
+    padding-bottom: 4px;
+}
+
+.icon-magnify {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.input-search {
+    padding-left: 36px;
+}
+
+button.dots {
+    position: relative;
+    left: 18px;
+    top: 8px;
+}

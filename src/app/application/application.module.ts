@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApplicationComponent } from './application.component';
 import { ApplicationRoutingModule } from './application-routing.module';
-import { MatMenuModule, MatToolbarModule, MatSidenavModule, MatCardModule, MatIconModule } from '@angular/material';
+import { MatMenuModule, MatToolbarModule, MatSidenavModule, MatCardModule, MatFormFieldModule, MatIconModule, MatSelectModule, MatExpansionModule } from '@angular/material';
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { AccountsComponent } from './accounts/accounts.component';
@@ -22,12 +22,7 @@ import { SupportComponent } from './support/support.component';
   imports: [
     CommonModule,
     ApplicationRoutingModule,
-    SharedModule,
-    MatMenuModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatCardModule,
+    SharedModule
   ]
 })
 export class ApplicationModule {}

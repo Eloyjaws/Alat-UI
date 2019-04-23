@@ -1,6 +1,12 @@
 <div class="innerToolbar">
-    <a routerLink="/app/accounts">Funds Transfer</a>
-    <a routerLink="/app/accounts">Transfer To Contact</a>
-    <a routerLink="/app/accounts">E-ATM Cardless Withdrawal</a>
-    <a routerLink="/app/accounts">FX Transfer</a>        
+  <a routerLinkActive="active" routerLink="/app/transfers/transfer-to-account">Funds Transfer</a>
+  <a routerLinkActive="active" routerLink="/app/transfers/transfer-to-contact">Transfer To Contact</a>
+  <a routerLinkActive="active" routerLink="/app/transfers/cardless-transfer">E-ATM Cardless Withdrawal</a>
+  <a routerLinkActive="active" routerLink="/app/transfers/fx-transfer">FX Transfer</a>
 </div>
+<section style="position: relative; padding-top: 88px;">
+  <div
+    style="position: fixed; top: 0; right: 24px; width: 100%; height: 148px; background: #fafafa; z-index: 2 "
+  ></div>
+  <router-outlet></router-outlet>
+</section>

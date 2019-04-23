@@ -1,5 +1,10 @@
 <div class="innerToolbar">
-    <a routerLink="/app/accounts">Airtime and Data</a>     
-    <a routerLink="/app/accounts">New Bills Payment</a>     
-    <a routerLink="/app/accounts">Recurring Payments</a>     
+    <a routerLinkActive="active" routerLink="/app/airtime-bills/index">Airtime and Data</a>     
+    <a routerLinkActive="active" routerLink="/app/airtime-bills/bills">New Bills Payment</a>     
+    <a routerLinkActive="active" routerLink="/app/airtime-bills/schedule">Recurring Payments</a>     
 </div>
+<section style="position: relative; padding-top: 88px;">
+    <div style="position: fixed; top: 0; right: 24px; width: 100%; height: 148px; background: #fafafa; z-index: 2 "></div>
+    <router-outlet></router-outlet>
+</section>
+    

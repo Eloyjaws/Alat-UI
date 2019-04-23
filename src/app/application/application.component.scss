@@ -7,6 +7,10 @@ section.wrapper {
   flex: 1 1 auto;
 }
 
+:host::ng-deep .mat-toolbar.mat-primary {
+  background: #6C44FF;
+}
+
 .toolbar {
   position: fixed;
   z-index: 2;
@@ -38,6 +42,10 @@ section.wrapper {
   }
 }
 
+:host ::ng-deep .mat-drawer-content-full {
+  margin-left: 64px !important;
+}
+
 .sidenav-content {
   width: 260px;
   transition: all 0.2s linear;
@@ -59,7 +67,7 @@ section.wrapper {
   color: #393939;
   line-height: 24px !important;
   mat-icon {
-    margin-top: 4px;
+    margin-bottom: 2px;
     fill: #7751ff;
   }
   .mat-icon svg {
@@ -78,5 +86,18 @@ section.wrapper {
     // margin-top: 4px;
     margin-right: 8px;
     padding-top: 2px;
+  }
+}
+
+
+span small {
+  font-weight: 300 !important;
+}
+
+.sidebar-link.active {
+  color: #FFF;
+  background: #6C44FF;
+  mat-icon {
+    fill: #FFF;
   }
 }

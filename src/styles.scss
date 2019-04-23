@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,800');
 
 * {
 	box-sizing: border-box;
@@ -6,8 +7,42 @@
 
 body {
 	background: #f6f5f7;
-	font-family: 'Montserrat', sans-serif;
+	// font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	margin: 0;
+}
+
+button.btn-outline-primary {
+    border: 1px solid #6C44FF !important;
+    color: #6c44ff !important;
+    background: #FFFFFF !important;
+    padding: 8px 12px !important;
+    font-weight: 300 !important;
+    // font-size: 16px !important;
+    &:hover {
+        background: #6C44FF !important;
+        color: #FFFFFF !important;
+        transition: background-color 0.18s linear !important;
+    }
+}
+
+button.btn-primary {
+    border: 1px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+    background: #6C44FF !important;
+    padding: 8px 12px !important;
+    font-weight: 300 !important;
+    // font-size: 16px !important;
+    &:hover {
+        border: 1px solid #6C44FF !important;
+        background: #FFFFFF !important;
+        color: #6C44FF !important;
+        transition: background-color 0.18s linear !important;
+    }
+}
+
+.text-primary {
+    color: #6C44FF !important;
 }
 
 .innerToolbar::-webkit-scrollbar {
@@ -19,10 +54,12 @@ body {
 	background-color: #fff;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
-	overflow: auto;
+    overflow: auto;
+    width: calc(100% - 112px);
+    position: fixed;
+    z-index: 3;
 	white-space: nowrap;
 	height: 60px;
-	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 	a {
@@ -37,7 +74,7 @@ body {
 	  text-decoration: none;
 	  height: 100%;
 	  position: relative;
-	  &::before {
+	  &::before, &.active::before {
 		position: absolute;
 		content: "";
 		z-index: 3;
@@ -48,11 +85,114 @@ body {
 		background-color: transparent;
 		transition: all 0.1s linear 0.08s;
 	  }
-	  &:hover::before {
+	  &:hover::before, &.active::before {
 		height: 4px;
 		background-color: #6c44ff;
 		transition: all 0.1s linear 0.08s;
 	  }
 	}
   }
-  
+	
+	
+	// Account Cards and whatnot
+	.day {
+    margin-bottom: 24px;
+    margin-top: 32px;
+    p:first-child {
+        text-align: center;
+        position: relative;
+        transform-style: preserve-3d;
+        background: #FFF;
+        margin: auto 15%;
+        &:after {
+            position: absolute;
+            content: "";
+            transform: translateZ(-1px);
+            height: 1px;
+            width: 135%;
+            left: -17.5%;
+            right: 0%;
+            bottom: 12px;
+            background: #393939;
+            // margin: 0 auto;
+
+        }
+    }
+}
+
+.tChart {
+    border: 1px solid #ccc;
+    min-width: 85%;
+    max-width: 100%;
+    * {
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .tChart {
+        border: 1px solid #ccc;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+
+}
+
+mat-icon {
+    margin-bottom: 2px;
+    fill: #7751ff;
+  }
+  .mat-icon svg {
+    height: 24px;
+    width: 24px;
+  }
+
+.card-1 {
+    height: 125px;
+    margin-bottom: 24px;
+}
+
+.col-md-5 .card-body {
+    flex-wrap: wrap;
+}
+
+.card-body {
+    position: relative;
+}
+
+.chevron {
+    position: absolute;
+    top: 54px;
+    right: 24px;
+}
+
+.card-header-gradient {
+    min-height: 140px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #2B4CFF;
+	background: -webkit-linear-gradient(to right, #2B4CFF, #6C44FF);
+	background: linear-gradient(to right, #2B4CFF, #6C44FF);
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient__inner__card {
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+    .text-right {
+        position: absolute;
+        top: 40%;
+        right: 4%;
+        color: #2B4CFF;
+    }
+}
